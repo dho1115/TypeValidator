@@ -1,6 +1,7 @@
 from typing import Union;
 from types import FunctionType;
 
+#Type Validator.
 def TypeValidator(*AcceptedTypes: str):
    """
    Enter the accepted "types" of arguments your target function accepts. E.G.: 'str' (string), 'bool' (boolean), 'int' (integer).
