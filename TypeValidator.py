@@ -38,9 +38,11 @@ def TypeValidator(*AcceptedTypes: str):
          return TargetFunction(*arguments)
    return FunctionWrapper
 
+#TESTING: Creating the TypeValidators.
 addNumbersWithValidator = TypeValidator('int', 'float')
 groceryListWithValidator = TypeValidator('list');
 
+#TESTING: Creating the TargetFunctions that will be used with the above TypeValidators.
 def addThreeNumbers(a: Union[int, float], b: Union[int, float], c: Union[int, float]):
    return a + b + c;
 
@@ -50,6 +52,7 @@ def greeting(name: str):
 def groceryList(list: list):
    return list;
 
+#TESTING: Above TypeValidators WITH the TargetFunctions and arguments.
 print(addNumbersWithValidator)
 print(TypeValidator('str')(greeting, 'Jamie'))
 print(addNumbersWithValidator(addThreeNumbers, 5,7, "nine"));
